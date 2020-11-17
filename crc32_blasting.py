@@ -1,6 +1,8 @@
-"""
-CRC32爆破
-"""
+# -*- coding: utf-8 -*-
+# @Author  : Zoey Zhao
+# @Function: CRC32爆破
+
+
 import binascii
 import time
 
@@ -20,8 +22,7 @@ def checkCRC32(txt):
     检测CRC32是否匹配
     """
     if binascii.crc32(txt.encode()) in crcNum:
-        tmp = binascii.crc32(txt.encode())
-        print("CRC32 of {} is-> 0x{:02X}".format(txt, tmp))
+        print("CRC32 of {} is-> 0x{:02X}".format(txt, binascii.crc32(txt.encode())))
 
 def splicing(txt,num):
     """
