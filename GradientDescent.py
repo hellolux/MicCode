@@ -1,11 +1,12 @@
-"""
-梯度下降算法
-根据《深度学习的数学》（图灵图书）——涌井良幸; 涌井贞美.
-书中的用Excel体验梯度下降法用Python进行实现
+# -*- coding: utf-8 -*-
+# @Author  : Zoey Zhao
+# @Function: 梯度下降算法
+# 根据《深度学习的数学》（图灵图书）——涌井良幸; 涌井贞美.
+# 书中的用Excel体验梯度下降法用Python进行实现
+#
+# 题目：
+# 对于函数z = x^2 + y^2，用梯度下降算法求出使得函数取得最小值的x,y的值
 
-题目：
-对于函数z = x^2 + y^2，用梯度下降算法求出使得函数取得最小值的x,y的值
-"""
 import matplotlib.pyplot as plt
 from pylab import mpl
 
