@@ -7,7 +7,7 @@ import sys,getopt
 
 # 密文
 M = 'FRPHEVGL'
-
+N = ""
 def decode(M,N):
     # 明文
     C = ""
@@ -29,11 +29,23 @@ if __name__ == '__main__':
         print('请输入参数 -h 了解使用方法.')
         sys.exit()
     try:
-        opts, args = getopt.getopt(sys.argv[1:], 'hm:n')
+        opts, args = getopt.getopt(sys.argv[1:], 'hm:k:')
     except getopt.GetoptError:
         print('请输入参数 -h 了解使用方法.')
         sys.exit()
     for opt, arg in opts:
         if opt == "-h":
             print("功能: 凯撒密码暴力破解")
-            print("使用: python Caser-Blasting.py -m <密文> [-key <>]")
+            print("使用: python Caser-Blasting.py -m <密文> [-k <>]")
+            print("例子: python Caser-Blasting.py -m FRPHEVGL -k 13")
+            sys.exit()
+        elif opt == '-m':
+            M = arg
+        elif opt == '-k':
+            N = arg
+    if N == "":
+        for i in range(26):
+            if i == 0: continue
+            decode(M,i)
+    else:
+        decode(M,int(N))
