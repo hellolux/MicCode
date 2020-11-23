@@ -3,10 +3,7 @@
 # @Time    : 2020/11/18 9:16
 # @Function: ASCII变种凯撒规律查询
 
-# 密文
-M = "afZ_r9VYfScOeO_UL^RWUc"
-# 猜想
-G = 'flag{'
+import sys,getopt
 
 def test(i,newTmp):
     """
@@ -79,4 +76,9 @@ def main(M,G):
     else:
         TIOD(M, IODDic[0], TIODDic[0])
 
-main(M,G)
+if __name__ == '__main__':
+    # 密文
+    M = "afZ_r9VYfScOeO_UL^RWUc"
+    # 猜想
+    G = 'flag{'
+    main(M,G)
