@@ -9,7 +9,7 @@ url = "https://api.ctfhub.com/User_API/User/checkIn"
 
 payload = "{}"
 headers = {
-  'Authorization': 'ctfhub_sessid=eqo5e95akqpluloeef4th18uc28akooc',
+  'Authorization': 'ctfhub_sessid=<your sessid>',
   'Content-Type': 'application/json;charset=UTF-8',
 }
 

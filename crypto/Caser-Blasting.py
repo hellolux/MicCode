@@ -20,10 +20,6 @@ def decode(M,N):
             C += chr(ord(M[i]) - N)
     print("密文:[ {} ] 偏移量:[ {} ] 明文:[ {} ]".format(M,N,C))
 
-# for i in range(26):
-#     if i == 0:continue
-#     decode(M,i)
-
 if __name__ == '__main__':
     if len(sys.argv[1:]) == 0:
         print('请输入参数 -h 了解使用方法.')
